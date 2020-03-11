@@ -1,6 +1,6 @@
 public class BlaaResept extends Resepter { //Subklasse av Resepter.
 
-  public BlaaResept(Legemiddel legemiddel, Lege lege, int pasient, int r) {
+  public BlaaResept(Legemiddel legemiddel, Lege lege, Pasient pasient, int r) {
     super(legemiddel, lege, pasient, r); //aksesserer superklassens konstruktoer.
   }
 
