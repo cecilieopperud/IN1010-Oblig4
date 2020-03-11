@@ -1,4 +1,4 @@
-public class Lege { //Oppretter klassen Lege.
+public class Lege implements Comparable <Lege> { //Oppretter klassen Lege.
   protected String legeNavn; //protected variabel legeNavn slik at den er tilgjengelig for subklasser.
 
   public Lege(String navn) { //Konstruktoer som tar imot en String navn.
