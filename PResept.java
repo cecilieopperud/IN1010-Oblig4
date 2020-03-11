@@ -1,6 +1,6 @@
 public class PResept extends HvitResept { //Subklasse av HvitResept.
 
-  public PResept(Legemiddel legemiddel, Lege lege, int pasient) { //Tar ikke inn reit da jeg legger inn 3 selv i super().
+  public PResept(Legemiddel legemiddel, Lege lege, Pasient pasient) { //Tar ikke inn reit da jeg legger inn 3 selv i super().
     super(legemiddel, lege, pasient, 3); //akkseserer superklassens konstruktoer.
   }
 
