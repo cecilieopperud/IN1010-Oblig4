@@ -2,11 +2,11 @@ abstract public class Resepter { //Oppretter klassen Resepter. Bruker abstract d
   protected int id; //Oppretter variabler som protected og deklarerer de. Slik er de tilgjengelig for suklassene.
   protected Legemiddel legemiddel; //legemiddel fra klassen Legemiddel.
   protected Lege utskrivendeLege; //utskrivendeLegee fra klassen Lege
-  protected int pasientId;
+  protected Pasient pasientId;
   protected int reit;
   protected static int tellerId = 0; //Oppretter static int tellerId som legges til id slik at de faar hver sin unike id.
 
-  public Resepter(Legemiddel middel, Lege lege, int pasient, int r) { //Konstruktoeren tar inn legemiddel, lege, pasientId og reit.
+  public Resepter(Legemiddel middel, Lege lege, Pasient pasient, int r) { //Konstruktoeren tar inn legemiddel, lege, pasientId og reit.
     legemiddel = middel; //Argumentene settes til aa vere verdien til hver variabel.
     utskrivendeLege = lege;
     pasientId = pasient;
