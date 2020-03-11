@@ -34,7 +34,7 @@ class Pasient {
 		liste.leggPaa(r);
 		}
 
-	public Resept hentResepter(){
-		liste.hentListe();
+	public Resepter hentResepter(){
+		return liste.hentListe();
 		}
 }
