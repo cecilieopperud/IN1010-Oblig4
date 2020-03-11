@@ -1,6 +1,6 @@
 public class HvitResept extends Resepter { //Subklasse av Resepter.
 
-  public HvitResept(Legemiddel legemiddel, Lege lege, int pasient, int r) {
+  public HvitResept(Legemiddel legemiddel, Lege lege, Pasient pasient, int r) {
     super(legemiddel, lege, pasient, r); //Aksesserer superklassens konstruktoer.
   }
 
