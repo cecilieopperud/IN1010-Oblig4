@@ -113,4 +113,10 @@ public class Lenkeliste<T> implements Liste<T> { //implementerer grensesnittet.
     }
     return oppgittNode.verdi; //returnerer verdien til elementet paa den oppgitte indeksen.
   }
+    public T hentListe(){
+    Node n = start;
+    for(i = 0; i < stoerrelse(); i++){
+      n = n.neste;
+      return n;
+    }
 }
