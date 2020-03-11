@@ -119,4 +119,29 @@ public class Lenkeliste<T> implements Liste<T> { //implementerer grensesnittet.
       n = n.neste;
       return n;
     }
+   @Override
+   public Iterator iterator(){
+       return new LenkelisteIterator();
+   }
+  
+   public class LenkelisteIterator<T> implements Iterator<T>{  
+    Node denneNoden = null;
+
+    @Override
+    public T next(){
+      if(denneNoden == null){
+        denneNoden = forste;
+        return denneNoden.verdi;
+      }
+      denneNoden = denneNoden.neste;
+      return denneNoden.verdi;
+    }
+
+    @Override
+    public boolean hasNext(){
+      if (denneNoden == null){
+        return forste != null;
+      }
+      return denneNoden.neste != null;
+    }
 }
