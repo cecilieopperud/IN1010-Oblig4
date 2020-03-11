@@ -7,17 +7,16 @@
 
 
 class Pasient {
-
 	static int pasientID = 0;
-  String fodselsnummer;
+	String fodselsnummer;
 	String navn;
-Stabel<Resepter> liste = new Stabel<Resepter>();
+	Stabel<Resepter> liste = new Stabel<Resepter>();
 
 	Pasient(int f, String n){
     	fodselsnummer = Integer.toString(f);
 			navn = n;
-      pasientID ++;
-    }
+      	pasientID ++;
+    	}
 
 	hentFodselsnummer(){
 		return fodselsnummer;
@@ -38,4 +37,4 @@ Stabel<Resepter> liste = new Stabel<Resepter>();
 	public Resept hentResepter(){
 		liste.hentListe();
 		}
-	}
+}
