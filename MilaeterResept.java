@@ -1,6 +1,6 @@
 public class MilaeterResept extends HvitResept { //Subklasse av HvitResept.
 
-  public MilaeterResept(Legemiddel legemiddel, Lege lege, int pasient, int r) {
+  public MilaeterResept(Legemiddel legemiddel, Lege lege, Pasient pasient, int r) {
     super(legemiddel, lege, pasient, r); //Aksesserer superklassens konstruktoer.
   }
 
