@@ -11,7 +11,7 @@ class Pasient {
 	static int pasientID = 0;
   String fodselsnummer;
 	String navn;
-Stabel<Resept> liste = new Stabel<Resept>();
+Stabel<Resepter> liste = new Stabel<Resepter>();
 
 	Pasient(int f, String n){
     	fodselsnummer = Integer.toString(f);
@@ -31,7 +31,7 @@ Stabel<Resept> liste = new Stabel<Resept>();
 		return pasientID;
 		}
 
-	public void leggTilResept(Resept r){
+	public void leggTilResept(Resepter r){
 		liste.leggPaa(r);
 		}
 
