@@ -6,27 +6,27 @@
 //reseptlisten.
 
 
-class Pasient {
+public class Pasient {
 	static int pasientID = 0;
 	String fodselsnummer;
 	String navn;
 	Stabel<Resepter> liste = new Stabel<Resepter>();
 
-	Pasient(int f, String n){
+	public Pasient(int f, String n){
     	fodselsnummer = Integer.toString(f);
 			navn = n;
       	pasientID ++;
     	}
 
-	hentFodselsnummer(){
+	public String hentFodselsnummer (){
 		return fodselsnummer;
 		}
 
-	hentNavn(){
+	public String hentNavn(){
 		return navn;
 		}
 
-	hentID(){
+	public int hentID(){
 		return pasientID;
 		}
 
