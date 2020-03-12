@@ -1,5 +1,6 @@
-import java.util.Iterator;
 
+import java.util.Iterator;
+import java.util.*;
 public class Lenkeliste<T> implements Liste<T> { //implementerer grensesnittet.
   public Node forst = new Node(null);   //Deklarerer og opprettter forst som Node med verdien null.
 
@@ -115,37 +116,33 @@ public class Lenkeliste<T> implements Liste<T> { //implementerer grensesnittet.
     }
     return oppgittNode.verdi; //returnerer verdien til elementet paa den oppgitte indeksen.
   }
-  public T hentListe(){
-    Node n = forst;
-    for(i = 0; i < stoerrelse(); i++){
-      n = n.neste;
-      return n;
+
+
+
+  public LenkelisteIterator iterator(){
+      return new LenkelisteIterator(this);
     }
 
-  @Override
-  public Iterator<T> iterator(){
-      return new LenkelisteIterator();
-    }
 
-  @Override
   public class LenkelisteIterator implements Iterator<T>{
-    Node denneNoden = null;
+    private int indeks = 0;
+    private Liste<T> liste;
 
+    public LenkelisteIterator(Liste<T> n){
+    liste = n;
+    }
+    @Override
     public T next(){
-      if(denneNoden == null){
-        denneNoden = forst;
-        return denneNoden.verdi;
-      }
-      denneNoden = denneNoden.neste;
-      return denneNoden.verdi;
+      return liste.hent(indeks++);
     }
-
+    @Override
     public boolean hasNext(){
-      if (denneNoden == null){
-        return forst != null;
-      }
-      return denneNoden.neste != null;
-    }
+      return indeks<liste.stoerrelse();
+  }
+  @Override
+  public void remove(){
+    throw new UnsupportedOperationException();
   }
 }
 }
+
